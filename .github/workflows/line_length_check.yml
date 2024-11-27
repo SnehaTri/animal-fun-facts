@@ -23,7 +23,7 @@ jobs:
         echo "File dtected: $FILES"
         for FILE in $FILES; do
           echo "Checking $FILE"
-          if awk -v len=$MAX_LENGTH 'length > len { print FILENAME ":" NR ": " $0; exit 1 }' $FILE; then
+          if awk -v len=$MAX_LENGTH 'length($0) > len { print FILENAME ":" NR ": " $0; }' $FILE; then
             echo "Line length exceeds $MAX_LENGTH in $FILE"
             ERROR_FOUND=true
           fi
