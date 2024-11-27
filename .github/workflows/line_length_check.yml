@@ -18,7 +18,7 @@ jobs:
 
     - name: Run line-length check
       run: |
-        MAX_LENGTH=20
+        MAX_LENGTH=80
         FILES=$(git ls-files 'facts/*.py' 'facts/*.md' 'facts/*.txt')
         echo "File dtected: $FILES"
         for FILE in $FILES; do
