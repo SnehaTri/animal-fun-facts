@@ -24,7 +24,6 @@ jobs:
         for FILE in $FILES; do
           echo "Checking $FILE"
           if awk -v len=$MAX_LENGTH 'length($0) > len { print FILENAME ":" NR ": " $0; exit 1 }' $FILE; then
-          if [ $? -eq 1 ]; then
             ERROR_FOUND=true
             echo "Line length exceeds $MAX_LENGTH in $FILE"
           fi
