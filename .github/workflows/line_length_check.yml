@@ -28,7 +28,7 @@ jobs:
             echo "Line length exceeds $MAX_LENGTH in $FILE"
           fi
         done
-        if ["$ERROR_FOUND" = true]; then 
+        if [ "$ERROR_FOUND" = true ]; then 
           exit 1
         fi  
         echo "All lines are within the $MAX_LENGTH limits."
