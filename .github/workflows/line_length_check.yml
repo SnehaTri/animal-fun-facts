@@ -20,8 +20,9 @@ jobs:
       run: |
         MAX_LENGTH=20
         FILES=$(git ls-files 'facts/**/*.py' 'facts/**/*.md' 'facts/**/*.txt')
+        echo "$FILES"
         for FILE in $FILES; do
-          echo "$FILE"
+          echo "Checking $FILE"
           if ! awk -v len=$MAX_LENGTH 'length > len { print FILENAME ":" NR ": " $0; exit 1 }' $FILE; then
             echo "Line length exceeds $MAX_LENGTH in $FILE"
             exit 1
