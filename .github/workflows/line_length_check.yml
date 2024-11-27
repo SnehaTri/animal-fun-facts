@@ -20,7 +20,7 @@ jobs:
       run: |
         MAX_LENGTH=20
         FILES=$(git ls-files 'facts/**/*.py' 'facts/**/*.md' 'facts/**/*.txt')
-        echo "$FILES"
+        echo "File dtected: $FILES"
         for FILE in $FILES; do
           echo "Checking $FILE"
           if ! awk -v len=$MAX_LENGTH 'length > len { print FILENAME ":" NR ": " $0; exit 1 }' $FILE; then
