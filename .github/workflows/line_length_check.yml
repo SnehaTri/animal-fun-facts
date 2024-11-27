@@ -7,6 +7,9 @@ on:
   push:
     branches:
       - main
+      - feature-line-length-check
+    paths:
+      - 'facts/**'
 
 jobs:
   check-line-length:
@@ -18,7 +21,7 @@ jobs:
     - name: Run line-length check
       run: |
         MAX_LENGTH=80
-        FILES=$(git ls-files 'facts/**/*.py' 'facts/**/*.md' 'facts/**/*.txt')
+        FILES=$(git ls-files '*.py' '*.md' '*.txt')
         for FILE in $FILES; do
           if awk -v len=$MAX_LENGTH 'length > len { print FILENAME ":" NR ": " $0; exit 1 }' $FILE; then
             echo "Line length exceeds $MAX_LENGTH in $FILE"
