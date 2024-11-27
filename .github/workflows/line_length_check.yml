@@ -28,4 +28,4 @@ jobs:
             exit 1
           fi
         done
-        echo "All lines are within the $MAX_LENGTH limit."
+        echo "All lines are within the $MAX_LENGTH limits."
