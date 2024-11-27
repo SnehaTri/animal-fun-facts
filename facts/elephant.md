@@ -1,7 +1,7 @@
-# Chinchilla
+# Elephants
 
-- Chinchilla fur has the highest density of any land
-  animal with more than 20,000 hairs per square centimeter.
+- Elephants are the largest land animals on Earth. 
+  African elephants are larger than their Asian counterparts.
 
-- Many mammals grow just one hair from each follicle, but the
-  chinchilla has more than 50 hairs in a single follicle.
+- There are three species: the African savanna elephant, 
+  the African forest elephant, and the Asian elephant.
