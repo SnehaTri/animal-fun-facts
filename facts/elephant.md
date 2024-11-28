@@ -1,6 +1,6 @@
 # Elephants
 
-- Elephants are the largest land animals on Earth
+- Elephants are the largest land animals on Earth.
   African elephants are larger than their Asian counterparts.
 
 - There are three species: the African savanna elephant, 
